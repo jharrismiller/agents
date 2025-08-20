@@ -8,11 +8,13 @@ from agents import Agent, function_tool
 @function_tool
 def send_email(subject: str, html_body: str) -> Dict[str, str]:
     """ Send an email with the given subject and HTML body """
+
+    from_email_address=os.environ.get('FROM_EMAIL')
+    to_email_address=os.environ.get('TO_EMAIL')        
     sg = sendgrid.SendGridAPIClient(api_key=os.environ.get('SENDGRID_API_KEY'))
-    from_email = Email("ed@edwarddonner.com") # put your verified sender here
-    to_email = To("ed.donner@gmail.com") # put your recipient here
-    content = Content("text/html", html_body)
-    mail = Mail(from_email, to_email, subject, content).get()
+    from_email = Email(from_email_address) # put your verified sender here
+    to_email = To(to_email_address) # put your recipient here
+    mail = Mail(from_email, to_email, subject, None, html_body).get()
     response = sg.client.mail.send.post(request_body=mail)
     print("Email response", response.status_code)
     return {"status": "success"}
@@ -25,5 +27,5 @@ email_agent = Agent(
     name="Email agent",
     instructions=INSTRUCTIONS,
     tools=[send_email],
-    model="gpt-4o-mini",
+    model=os.environ.get('OPENROUTER_GPT_MODEL'),
 )

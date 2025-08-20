@@ -1,5 +1,7 @@
 from pydantic import BaseModel, Field
 from agents import Agent
+import os
+
 
 HOW_MANY_SEARCHES = 5
 
@@ -18,6 +20,6 @@ class WebSearchPlan(BaseModel):
 planner_agent = Agent(
     name="PlannerAgent",
     instructions=INSTRUCTIONS,
-    model="gpt-4o-mini",
+    model=os.environ.get('OPENROUTER_GPT_MODEL'),
     output_type=WebSearchPlan,
 )
