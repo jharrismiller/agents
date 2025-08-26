@@ -83,7 +83,8 @@ class StockPicker():
             config=self.agents_config['manager'],
             allow_delegation=True
         )
-            
+
+                    
         return Crew(
             agents=self.agents,
             tasks=self.tasks, 
@@ -101,25 +102,27 @@ class StockPicker():
             short_term_memory = ShortTermMemory(
                 storage = RAGStorage(
                         embedder_config={
-                            "provider": "openai",
+                            "provider": "ollama",
                             "config": {
-                                "model": 'text-embedding-3-small'
+                                "model": "nomic-embed-text",  # or "mxbai-embed-large"
+                                "url": "http://localhost:11434/api/embeddings"  # Default Ollama URL
                             }
-                        },
+                        },  
                         type="short_term",
                         path="./memory/"
-                    )
-                ),            # Entity memory for tracking key information about entities
+                )
+            ),            # Entity memory for tracking key information about entities
             entity_memory = EntityMemory(
                 storage=RAGStorage(
                     embedder_config={
-                        "provider": "openai",
-                        "config": {
-                            "model": 'text-embedding-3-small'
+                       "provider": "ollama",
+                       "config": {
+                            "model": "nomic-embed-text",  # or "mxbai-embed-large"
+                            "url": "http://localhost:11434/api/embeddings"  # Default Ollama URL
                         }
-                    },
+                    },                      
                     type="short_term",
                     path="./memory/"
                 )
-            ),
+            )
         )
