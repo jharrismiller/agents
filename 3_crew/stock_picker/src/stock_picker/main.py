@@ -14,7 +14,7 @@ def run():
     Run the research crew.
     """
     inputs = {
-        'sector': 'Robotics'
+        'sector': 'AI based education'
     }
 
     # Create and run the crew
