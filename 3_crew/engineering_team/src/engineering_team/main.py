@@ -12,19 +12,19 @@ warnings.filterwarnings("ignore", category=SyntaxWarning, module="pysbd")
 os.makedirs('output', exist_ok=True)
 
 requirements = """
-A simple account management system for a trading simulation platform.
-The system should allow users to create an account, deposit funds, and withdraw funds.
-The system should allow users to record that they have bought or sold shares, providing a quantity.
-The system should calculate the total value of the user's portfolio, and the profit or loss from the initial deposit.
-The system should be able to report the holdings of the user at any point in time.
-The system should be able to report the profit or loss of the user at any point in time.
-The system should be able to list the transactions that the user has made over time.
-The system should prevent the user from withdrawing funds that would leave them with a negative balance, or
- from buying more shares than they can afford, or selling shares that they don't have.
- The system has access to a function get_share_price(symbol) which returns the current price of a share, and includes a test implementation that returns fixed prices for AAPL, TSLA, GOOGL.
+A social networking system for communities such as apartments, HOA, or a neighborhood.
+The system should allow users to create an account.
+The system should allow users to see posts from other users.
+THe system should allow the user to like posts from others.
+The system should allow users to create their own posts which is text but may include photos or videos.
+The system should allow users to see announcements
+The system should allow users to create accouncements which includes a subject and body.
+The system should allow users to see upcoming events.
+The system should allow users to create upcoming events which includes a title, description, location and dates.
+The system should have 5-10 users, posts, announcements, and events so that it can be populated with data for the demo.
 """
-module_name = "accounts.py"
-class_name = "Account"
+module_name = "hi_neighbor.py"
+class_name = "HiNeighbor"
 
 
 def run():
