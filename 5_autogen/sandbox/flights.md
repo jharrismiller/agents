@@ -1,28 +1,68 @@
-Flight Deals from JFK to LHR - June 2025:
+### Flight Deals from ALB to DCA/BWI (October 2025)
 
-1. Airline: Virgin Atlantic
-   - Price: $497
-   - Non-stop
-   - In-flight amenities: meals, drinks, entertainment, WiFi
+1. **Flight:** Albany (ALB) to Washington DCA
+   - **Departure:** October 25, 2025
+   - **Return:** October 27, 2025
+   - **Price:** $153 (Round-trip)
+   - **Airline:** Southwest
 
-2. Airline: JetBlue
-   - Price: $314
-   - Non-stop
-   - Booking available now
+2. **Flight:** Albany (ALB) to Baltimore BWI
+   - **Departure:** October 25, 2025
+   - **Return:** October 27, 2025
+   - **Price:** $185 (Round-trip)
+   - **Airline:** United
 
-3. Airline: Delta
-   - Price: $239
-   - Non-stop
-   - Additional services: earns airline miles
+3. **Flight:** Albany (ALB) to Washington DCA
+   - **Departure:** October 26, 2025
+   - **Return:** October 28, 2025
+   - **Price:** $160 (Round-trip)
+   - **Airline:** American Airlines
 
-4. Airline: SWISS
-   - Price: $402
-   - Non-stop
-   - Comfortable seating and great service
+4. **Flight:** Albany (ALB) to Washington DCA
+   - **Departure:** October 25, 2025
+   - **Return:** October 29, 2025
+   - **Price:** $178 (Round-trip)
+   - **Airline:** Delta
 
-5. Airline: United Airlines
-   - Price: $450
-   - Non-stop
-   - Great onboard experience
+5. **Flight:** Albany (ALB) to Baltimore BWI
+   - **Departure:** October 26, 2025
+   - **Return:** October 29, 2025
+   - **Price:** $190 (Round-trip)
+   - **Airline:** Southwest
 
-Best Deal: JetBlue at $314 for a non-stop flight from JFK to LHR. 
+6. **Flight:** Albany (ALB) to Washington DCA
+   - **Departure:** October 28, 2025
+   - **Return:** October 30, 2025
+   - **Price:** $175 (Round-trip)
+   - **Airline:** JetBlue
+
+7. **Flight:** Albany (ALB) to Baltimore BWI
+   - **Departure:** October 25, 2025
+   - **Return:** October 28, 2025
+   - **Price:** $183 (Round-trip)
+   - **Airline:** United
+
+8. **Flight:** Albany (ALB) to Washington DCA
+   - **Departure:** October 27, 2025
+   - **Return:** October 29, 2025
+   - **Price:** $185 (Round-trip)
+   - **Airline:** Southwest
+
+9. **Flight:** Albany (ALB) to Baltimore BWI
+   - **Departure:** October 24, 2025
+   - **Return:** October 26, 2025
+   - **Price:** $180 (Round-trip)
+   - **Airline:** American Airlines
+
+10. **Flight:** Albany (ALB) to Washington DCA
+    - **Departure:** October 22, 2025
+    - **Return:** October 25, 2025
+    - **Price:** $190 (Round-trip)
+    - **Airline:** Delta
+
+### Selected Flight
+- **Flight:** Albany (ALB) to Washington DCA
+- **Departure:** October 25, 2025
+- **Return:** October 27, 2025
+- **Price:** $153 (Round-trip)
+- **Airline:** Southwest
