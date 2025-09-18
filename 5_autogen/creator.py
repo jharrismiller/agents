@@ -8,6 +8,7 @@ import importlib
 import logging
 from autogen_core import AgentId
 from dotenv import load_dotenv
+import os
 
 load_dotenv(override=True)
 
@@ -36,7 +37,19 @@ class Creator(RoutedAgent):
 
     def __init__(self, name) -> None:
         super().__init__(name)
-        model_client = OpenAIChatCompletionClient(model="gpt-4o-mini", temperature=1.0)
+        model_client = OpenAIChatCompletionClient(
+            temperature=1,
+            base_url=os.environ.get('OPENROUTER_BASE_URL'),
+            model="openai/gpt-4o-mini",
+            api_key=os.environ.get('OPENROUTER_API_KEY'),
+            model_info={
+                "family": "gpt-4o",
+                "vision": True,
+                "function_calling": True,
+                "json_output": True,
+                "structured_output": True
+            }
+        )
         self._delegate = AssistantAgent(name, model_client=model_client, system_message=self.system_message)
 
     def get_user_prompt(self):

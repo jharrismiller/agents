@@ -5,6 +5,7 @@ from autogen_ext.models.openai import OpenAIChatCompletionClient
 import messages
 import random
 from dotenv import load_dotenv
+import os
 
 load_dotenv(override=True)
 
@@ -14,7 +15,7 @@ class Agent(RoutedAgent):
 
     system_message = """
     You are a creative entrepreneur. Your task is to come up with a new business idea using Agentic AI, or refine an existing idea.
-    Your personal interests are in these sectors: Healthcare, Education.
+    Your personal interests are in these sectors: Trades (Plumbing, Electrical, HVAC), Real Estate.
     You are drawn to ideas that involve disruption.
     You are less interested in ideas that are purely automation.
     You are optimistic, adventurous and have risk appetite. You are imaginative - sometimes too much so.
@@ -28,7 +29,19 @@ class Agent(RoutedAgent):
 
     def __init__(self, name) -> None:
         super().__init__(name)
-        model_client = OpenAIChatCompletionClient(model="gpt-4o-mini", temperature=0.7)
+        model_client = OpenAIChatCompletionClient(
+            temperature=0.7,
+            base_url=os.environ.get('OPENROUTER_BASE_URL'),
+            model="openai/gpt-4o-mini",
+            api_key=os.environ.get('OPENROUTER_API_KEY'),
+            model_info={
+                "family": "gpt-4o",
+                "vision": True,
+                "function_calling": True,
+                "json_output": True,
+                "structured_output": True
+            }
+        )
         self._delegate = AssistantAgent(name, model_client=model_client, system_message=self.system_message)
 
     @message_handler
